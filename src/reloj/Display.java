@@ -3,6 +3,8 @@ package reloj;
 import javax.swing.JOptionPane;
 
 /**
+ * Esta clase contiene los metodos necesarios para mostrar la informacion del
+ * programa
  *
  * @author Arturo
  */
@@ -23,16 +25,19 @@ public class Display{
             System.out.println(h+":"+m+":"+s);
         }
     }
+
     /**
      * Metodo que permite mostrar mensajes de información
+     *
      * @param m contenido del mensaje
      */
     public static void mostrarMensaje(String m){
         JOptionPane.showMessageDialog(null, m);
     }
+
     /**
      * Metodo que permite que se muestre la hora a la que está puesta la alarma
-     * 
+     *
      * @param ah hora de la alarma
      * @param am minuto de la alarma
      */
