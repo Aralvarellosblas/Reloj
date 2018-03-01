@@ -5,6 +5,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Esta clase se encarga de generar el reloj
  *
  * @author Arturo
  */
@@ -13,6 +14,10 @@ public class Hora{
     private static int h, m, s;
     private static Date d;
 
+    /**
+     * Este metodo obtiene la fecha del sistema y muestra la hora minuto y
+     * segundo para formar el reloj
+     */
     public static void tiempo(){
         Alarma al=new Alarma();
         do{
