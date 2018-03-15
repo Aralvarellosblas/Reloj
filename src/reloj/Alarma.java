@@ -20,7 +20,7 @@ public class Alarma extends TimerTask{
      *
      * Este metodo permite cambiar la alarma mediante una selecion. El valor de
      * la alarma se incrementa de uno en uno
-     * 
+     *
      */
     public static void cambiarHoraAlarma(){
         int selec;
@@ -59,7 +59,7 @@ public class Alarma extends TimerTask{
     /**
      *
      * Es un metodo encargado de dar valores a las horas y minutos de la alarma.
-     * 
+     *
      */
     public static void ponerAlarma(){
         do{
@@ -79,7 +79,8 @@ public class Alarma extends TimerTask{
     public static void sonarAlarma(boolean al){
         try{
             if(Hora.h==hor&&Hora.m==min&&al==true){
-                System.out.println("Alarmaaa!!!!!!!!!!");
+//                System.out.println("Alarmaaa!!!!!!!!!!");
+                Display.mostrarMensaje("Alarmaaa!!!!!!!!!!");
                 Thread.sleep(2000);
             }
         }catch(InterruptedException ex){
@@ -97,10 +98,12 @@ public class Alarma extends TimerTask{
     public static boolean activarDesactivarAlarma(){
         if(alarma==false){
             alarma=true;
-            System.out.println("Alarma Activada");
+//            System.out.println("Alarma Activada");
+            Display.mostrarMensaje("Alarma Activada");
         }else{
             alarma=false;
-            System.out.println("Alarma Desactivada");
+//            System.out.println("Alarma Desactivada");
+            Display.mostrarMensaje("Alarma Desactivada");
         }
         return alarma;
     }
@@ -109,7 +112,7 @@ public class Alarma extends TimerTask{
      *
      * Metodo de la clase TimerTask que permite que la alarma se ejecute a la
      * vez que la hora
-     * 
+     *
      */
     @Override
     public void run(){
