@@ -11,16 +11,17 @@ import javax.swing.JOptionPane;
 public class Display{
 
     /**
+     * 
      * Metodo que muestra la hora actual del Reloj
      *
      * @param h hora
      * @param m minutos
      * @param s segundos
-     * @param alarma valor que permite saber si la alarma está activada o no
      */
-    public static void mostrarHora(int h, int m, int s, boolean alarma){
+    public static void mostrarHora(int h, int m, int s){
+        boolean alarma=Alarma.alarma;
         if(alarma==true){
-            System.out.println(h+":"+m+":"+s+" Alarm");
+            System.out.println(h+":"+m+":"+s+" Alarma");
         }else{
             System.out.println(h+":"+m+":"+s);
         }
@@ -32,7 +33,7 @@ public class Display{
      * @param m contenido del mensaje
      */
     public static void mostrarMensaje(String m){
-        JOptionPane.showMessageDialog(null, m);
+        System.out.println(m);
     }
 
     /**
